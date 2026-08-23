@@ -4,7 +4,6 @@ interface Customer{
     time: string
 }
 
-
 function formatBookingConfirmation(booking:Customer):string {
     return `${booking.name}'s table for ${booking.guests} guests is confirmed at ${booking.time}.`
 }

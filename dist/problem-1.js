@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function getBatteryStatus(percentage) {
+    if (percentage < 0 || percentage > 100) {
+        return "Invalid input";
+    }
     if (percentage >= 0 && percentage <= 20) {
         return "Low";
     }
@@ -17,5 +20,8 @@ console.log(getBatteryStatus(40));
 console.log(getBatteryStatus(50));
 console.log(getBatteryStatus(51));
 console.log(getBatteryStatus(90));
-console.log(getBatteryStatus(92));
+console.log(getBatteryStatus(-1));
+console.log(getBatteryStatus(-10));
+console.log(getBatteryStatus(100));
+console.log(getBatteryStatus(101));
 //# sourceMappingURL=problem-1.js.map
